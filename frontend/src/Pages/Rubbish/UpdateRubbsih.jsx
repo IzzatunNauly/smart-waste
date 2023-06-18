@@ -114,7 +114,7 @@ const UpdateRubbsih = () => {
                     </select>
                   </div>
                   <div className="mb-3">
-                    <label className="form-label">Max Weight</label>
+                    <label className="form-label">Max Weight (KG)</label>
                     <input
                       type="text"
                       className="form-control"

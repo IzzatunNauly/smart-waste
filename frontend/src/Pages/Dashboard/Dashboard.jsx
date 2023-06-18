@@ -825,6 +825,9 @@ const Dashboard = () => {
                         <h5 className="font-semibold text-secondary mt-3">
                           {item.percent.toFixed(1)}%
                         </h5>
+                        <p className="font-semibold text-secondary mt-3">
+                          Weight {item.weight.toFixed(1)} KG | Max Weight {item.max_weight.toFixed(1)} KG
+                        </p>
                         {item.status == "Belum Penuh" ? (
                           <h5 className="font-semibold text-success">
                             Status : {item.status}

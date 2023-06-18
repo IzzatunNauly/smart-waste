@@ -54,7 +54,7 @@ const TrashFull = () => {
                     <td>{item.user.name}</td>
                     <td>{item.rubbish.category}</td>
                     <td>{item.date}</td>
-                    <td>{item.total}</td>
+                    <td>{item.total} KG</td>
                   </tr>
                     ))}
                 </tbody>

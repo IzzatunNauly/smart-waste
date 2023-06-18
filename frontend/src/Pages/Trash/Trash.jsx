@@ -52,7 +52,7 @@ const Trash = () => {
                     <th scope="row">{index+1}</th>
                     <td>{item.rubbish.category}</td>
                     <td>{item.date}</td>
-                    <td>{item.weight}</td>
+                    <td>{item.weight} KG</td>
                   </tr>
                     ))}
                 </tbody>

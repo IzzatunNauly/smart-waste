@@ -50,7 +50,7 @@ const Rubbish = () => {
                   <tr>
                     <th scope="row">{index+1}</th>
                     <td>{item.category}</td>
-                    <td>{item.max_weight}</td>
+                    <td>{item.max_weight} KG</td>
                     <td>
                       <Link to={`/update-rubbish/${item.id}`}>
                         <button className="btn btn-warning">Edit</button>
