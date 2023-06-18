@@ -8,8 +8,6 @@ import withReactContent from "sweetalert2-react-content";
 const MySwal = withReactContent(Swal);
 
 const CreateRubbish = () => {
-  // const HOST_URL = "http://192.168.137.250:8000/api/";
-  const LOCAL_URL = "http://localhost:8000/api/";
 
   const navigate = useNavigate();
   const [category, setCategory] = useState("");
@@ -35,7 +33,7 @@ const CreateRubbish = () => {
     try {
       const token = localStorage.getItem("token");
       const response = axios.post(
-        `${LOCAL_URL}rubbish`,
+        `${import.meta.env.VITE_LOCAL_URL}/rubbish`,
         {
           uniq_id: uniqId,
           category: category,

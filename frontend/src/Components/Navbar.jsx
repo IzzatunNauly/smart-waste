@@ -17,6 +17,7 @@ const Navbar = ({ toggleSidebar }) => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
+    localStorage.removeItem("session");
     navigate("/");
   };
 

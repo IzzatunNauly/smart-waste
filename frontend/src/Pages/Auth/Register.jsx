@@ -20,7 +20,8 @@ const Register = () => {
       password: password,
     };
     axios
-      .post("http://localhost:8000/api/auth/register", data)
+    // .post(`${import.meta.env.VITE_HOST_URL}/auth/register`, data)
+      .post(`${import.meta.env.VITE_LOCAL_URL}/auth/register`, data)
       .then((res) => {
         console.log(res);
         navigate("/");

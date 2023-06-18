@@ -5,9 +5,6 @@ import axios from "axios";
 
 const TrashFull = () => {
 
-  const HOST_URL = 'http://192.168.137.250:8000/api/';
-  const LOCAL_URL = 'http://localhost:8000/api/';
-
     const [trashFull, setTrashFull] = useState([]);
 
     const getTrashFull = async () => {
@@ -18,7 +15,7 @@ const TrashFull = () => {
                     Authorization: `Bearer ${token}`,
                 },
             };
-            const { data } = await axios.get(`${LOCAL_URL}trashfull`, config);
+            const { data } = await axios.get(`${import.meta.env.VITE_LOCAL_URL}/trashfull`, config);
             // const { data } = await axios.get(`${LOCAL_URL}trashFull`, config);
             console.log(data.data);
             setTrashFull(data.data);

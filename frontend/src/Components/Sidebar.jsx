@@ -9,7 +9,7 @@ import {FaTrashRestoreAlt} from 'react-icons/fa'
 
 const Sidebar = ({ children }) => {
   const location = useLocation();
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [active, setActive] = useState(location.pathname);
 
   const handleActive = (path) => {

@@ -8,8 +8,6 @@ import withReactContent from "sweetalert2-react-content";
 const MySwal = withReactContent(Swal);
 
 const EditProfile = () => {
-  // const HOST_URL = 'http://192.168.137.250:8000/api/';
-  const LOCAL_URL = 'http://localhost:8000/api/';
 
   const navigate = useNavigate();
 
@@ -30,7 +28,7 @@ const EditProfile = () => {
         },
       };
       const { data } = await axios.put(
-        `${LOCAL_URL}settings/profile/${id}`,
+        `${import.meta.env.VITE_LOCAL_URL}/settings/profile/${id}`,
         {
           name,
           email,
@@ -62,7 +60,7 @@ const EditProfile = () => {
                     Authorization: `Bearer ${token}`,
                 },
             };
-            const { data } = await axios.get(`${LOCAL_URL}settings/profile/${id}`, config);
+            const { data } = await axios.get(`${HOST_URL}settings/profile/${id}`, config);
             setName(data.data.name);
             setEmail(data.data.email);
             

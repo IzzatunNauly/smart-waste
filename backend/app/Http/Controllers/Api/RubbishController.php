@@ -23,7 +23,7 @@ class RubbishController extends Controller
                 'rubbishes.id as rubbish_id', 'category', 'max_weight',
                 DB::raw('IFNULL(SUM(weight), 0) as weight'),
                 DB::raw('IFNULL((SUM(weight) / max_weight * 100), 0) as percent'),
-                DB::raw('IF(((SUM(weight) / max_weight) * 100) < 100, "Belum Penuh", "Penuh") as status')
+                DB::raw('IF(((IFNULL(SUM(weight), 0) / max_weight) * 100) < 100, "Belum Penuh", "Penuh") as status')
             )
             ->leftJoin('trashes', 'trashes.rubbish_id', '=', 'rubbishes.id')
             ->groupBy('rubbishes.id', 'category', 'max_weight')
@@ -51,8 +51,12 @@ class RubbishController extends Controller
 
     public function update(RubbishRequest $request, $id)
     {
-        $request->validated();
-        Rubbish::where('id', $id)->update($request->all());
+       $validated = $request->validated();
+        Rubbish::where('id', $id)->update([
+            'uniq_id' => time(),
+            'category' => $validated['category'],
+            'max_weight' => $validated['max_weight']
+        ]);
         $response = Rubbish::where('id', $id)->first();
         return $this->apiSuccess($response);
 

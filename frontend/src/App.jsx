@@ -5,12 +5,12 @@ import Register from './Pages/Auth/Register'
 import Dashboard from './Pages/Dashboard/Dashboard'
 import ProtectedRoute from './Components/ProtectedRoute'
 import Rubbish from './Pages/Rubbish/Rubbish'
-import CreateRubbish from './Pages/Rubbish/CreateRubbish'
 import Trash from './Pages/Trash/Trash'
 import TrashFull from './Pages/TrashFull/TrashFull'
 import Profile from './Pages/Profile/Profile'
 import EditProfile from './Pages/Profile/EditProfile'
 import UpdatePassword from './Pages/Profile/UpdatePassword'
+import UpdateRubbsih from './Pages/Rubbish/UpdateRubbsih'
 
 function App() {
 
@@ -27,7 +27,7 @@ function App() {
           <Route path="/profile/edit/:id" element={<EditProfile />} />
           <Route path="/update-password/:id" element={<UpdatePassword />} />
           <Route path="/rubbish" element={<Rubbish />} />
-          <Route path="/rubbish/create" element={<CreateRubbish />} />
+          <Route path="/update-rubbish/:id" element={<UpdateRubbsih />} />
           <Route path="/trash" element={<Trash />} />
           <Route path="/trash-full" element={<TrashFull />} />
           </Route>

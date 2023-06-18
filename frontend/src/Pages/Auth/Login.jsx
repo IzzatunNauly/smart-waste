@@ -6,9 +6,6 @@ import {BsKey} from 'react-icons/bs'
 
 const Login = () => {
 
-  // const HOST_URL = 'http://192.168.137.250:8000/api/';
-  const HOST_URL = 'http://localhost:8000/api/';
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isError, setIsError] = useState(false);
@@ -22,8 +19,7 @@ const Login = () => {
       password: password,
     };
     axios
-      // .post(`${LOCAL_URL}auth/login`, data)
-      .post(`${HOST_URL}auth/login`, data)
+      .post(`${import.meta.env.VITE_LOCAL_URL}/auth/login`, data)
       .then((res) => {
         console.log(res);
         const session = {

@@ -4,10 +4,6 @@ import axios from "axios";
 
 const Trash = () => {
 
-
-  const HOST_URL = 'http://192.168.137.250:8000/api/';
-  const LOCAL_URL = 'http://localhost:8000/api/';
-
     const [trash, setTrash] = useState([]);
 
     const getTrash = async () => {
@@ -18,7 +14,7 @@ const Trash = () => {
                     Authorization: `Bearer ${token}`,
                 },
             };
-            const { data } = await axios.get(`${LOCAL_URL}trash`, config);
+            const { data } = await axios.get(`${import.meta.env.VITE_LOCAL_URL}/trash`, config);
             // const { data } = await axios.get(`${LOCAL_URL}trash`, config);
             setTrash(data.data);
             
@@ -28,7 +24,6 @@ const Trash = () => {
 
     };
 
-  
     useEffect(() => {
         getTrash();
     }, []);

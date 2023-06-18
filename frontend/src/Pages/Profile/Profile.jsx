@@ -5,9 +5,6 @@ import axios from "axios";
 
 const Profile = () => {
 
-  // const HOST_URL = 'http://192.168.137.250:8000/api/';
-  const LOCAL_URL = 'http://localhost:8000/api/';
-
     const token = localStorage.getItem("token");
     const {id} = useParams();
     const [user, setUser] = useState({});
@@ -19,7 +16,7 @@ const Profile = () => {
                     Authorization: `Bearer ${token}`,
                 },
             };
-            const { data } = await axios.get(`${LOCAL_URL}settings/profile/${id}`, config);
+            const { data } = await axios.get(`${import.meta.env.VITE_LOCAL_URL}/settings/profile/${id}`, config);
             
             setUser(data.data);
         }
