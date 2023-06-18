@@ -16,4 +16,8 @@ class TrashFull extends Model
     public function rubbish(){
         return $this->belongsTo(Rubbish::class, 'rubbish_id', 'id');
     }
+
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
 }

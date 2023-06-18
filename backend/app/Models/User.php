@@ -41,4 +41,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function trashFull(){
+        return $this->hasMany(TrashFull::class, 'user_id', 'id');
+    }
 }

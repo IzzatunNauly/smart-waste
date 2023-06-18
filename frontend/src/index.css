@@ -1,0 +1,22 @@
+.bg-color{
+    background-color: #f2f7ff;
+}
+
+:root {
+    background-color: #f2f7ff;
+}
+
+.btn.btn-primary {
+    background-color: #435ebe;
+    border-color: #435ebe;
+}
+
+.btn.btn-primary:hover {
+    background-color: #435ebe;
+    border-color: #435ebe;
+}
+
+.btn.btn-primary:active {
+    background-color: #435ebe;
+    border-color: #435ebe;
+}
