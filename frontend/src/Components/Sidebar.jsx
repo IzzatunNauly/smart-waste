@@ -61,7 +61,7 @@ const Sidebar = ({ children }) => {
                     <path d="M307.2 294.4h486.4v25.6H307.2z" fill="#231C1C" />
                   </svg>
                 </Link>
-                <span className="fs-3">Smart Waste</span>
+                <span className="fs-3">Waste Cleaner</span>
               </div>
               <div className="toggler">
                 <button

@@ -92,7 +92,7 @@ const Login = () => {
                     <path d="M307.2 294.4h486.4v25.6H307.2z" fill="#231C1C" />
                   </svg>
                   <span className="logo-name ms-2 text-black text-center fs-1">
-                    Smart Waste
+                    Waste Cleaner
                   </span>
                 </div>
               </div>
@@ -130,13 +130,13 @@ const Login = () => {
                 </button>
               </form>
               <div className="text-center mt-5 text-lg fs-4">
-                <p className="text-gray-600">
+                {/* <p className="text-gray-600">
                   Don't have an account?{" "}
                   <Link to="/register" className="font-bold">
                     Sign up
                   </Link>
                   .
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

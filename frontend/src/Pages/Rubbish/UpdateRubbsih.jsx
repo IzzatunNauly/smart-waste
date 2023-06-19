@@ -109,7 +109,7 @@ const UpdateRubbsih = () => {
                     >
                       <option selected>Open this select menu</option>
                       <option value="organik">Organik</option>
-                      <option value="unorganik">Unorganik</option>
+                      <option value="unorganik">Anorganik</option>
                       <option value="unknown">Unknown</option>
                     </select>
                   </div>

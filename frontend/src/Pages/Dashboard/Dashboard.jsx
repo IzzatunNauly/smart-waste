@@ -59,7 +59,7 @@ const Dashboard = () => {
             MySwal.fire({
               icon: "success",
               title: "Berhasil",
-              text: "Berhasil Mengososngkan Sampah",
+              text: "Berhasil Menambahkan Sampah",
             });
     } catch (error) {
       console.log(error);
